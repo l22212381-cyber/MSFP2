@@ -24,16 +24,17 @@ Esta práctica aborda el modelado dinámico del sistema cardiovascular mediante 
 
 1. [Resumen](#resumen)
 2. [Competencia y objetivos](#objetivos)
-3. [Modelo físico y analogía eléctrica](#analogia)
-4. [Formulación matemática y espacio de estados](#modelo)
-5. [Análisis temporal, estabilidad y polos](#analisis)
-6. [Diseño del controlador PID](#controlador)
-7. [Implementación en Python](#python)
-8. [Resultados y verificación cruzada](#resultados)
-9. [Flujo de trabajo](#flujo)
-10. [Actividades del estudiante](#actividades)
-11. [Estructura del repositorio](#estructura)
-12. [Referencias](#referencias)
+3. [Relación con el temario](#temario)
+4. [Modelo físico y analogía eléctrica](#analogia)
+5. [Formulación matemática y espacio de estados](#modelo)
+6. [Análisis temporal, estabilidad y polos](#analisis)
+7. [Diseño del controlador PID](#controlador)
+8. [Implementación en Python](#python)
+9. [Resultados y verificación cruzada](#resultados)
+10. [Flujo de trabajo](#flujo)
+11. [Actividades del estudiante](#actividades)
+12. [Estructura del repositorio](#estructura)
+13. [Referencias](#referencias)
 
 ---
 
@@ -72,6 +73,23 @@ Comprender y aplicar los principios de modelado en espacio de estados, funciones
 [Volver al contenido](#contenido)
 
 ---
+---
+
+<a id="temario"></a>
+## Relación con el temario
+
+La práctica integra contenidos correspondientes a las tres unidades principales de la asignatura **Modelado de Sistemas Fisiológicos (IBF-1020)**:
+
+| Unidad | Área | Contenidos aplicados |
+|---|---|---|
+| I | Sistemas de control retroalimentados | Diagramas de bloques cardiovascular, error en estado estacionario, respuesta temporal ante entradas estocásticas y análisis de estabilidad de polos |
+| II | Modelado matemático | Analogía hidráulica-eléctrica de Windkessel, leyes de Kirchhoff, representación en Variables de Estado y Funciones de Transferencia |
+| III | Controladores | Tipos de controladores (PID), sintonización automática in silico, seguimiento de referencias biológicas y sistemas de lazo cerrado |
+
+[Volver al contenido](#contenido)
+
+---
+
 
 <a id="analogia"></a>
 ## Modelo físico y analogía eléctrica
