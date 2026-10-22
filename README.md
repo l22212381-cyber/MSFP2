@@ -437,17 +437,17 @@ flowchart TD
 ---
 
 <a id="conclusiones"></a>
-## Conclusiones
+## 14. Conclusiones
 
-Completar esta sección después de analizar los resultados obtenidos. Las conclusiones deben abordar:
+Tras completar el modelado, simulación y control del sistema cardiovascular mediante el circuito Windkessel de 4 elementos, se desprenden las siguientes conclusiones académicas:
 
-- Cómo influye la distensibilidad arterial \(C\) en las diferencias entre los modelos hipotenso, normotenso e hipertenso.
-- Qué se observó en el análisis de los polos, la estabilidad y la respuesta al escalón.
-- En qué medida los controladores PID redujeron el error respecto a la referencia normotensa.
-- Qué tan consistentes fueron los resultados de MATLAB/Simulink, Simscape Electrical y Python.
-- Qué diferencias o limitaciones se observaron durante la simulación.
+- **Influencia de la compliancia arterial ($C$):** Las variaciones en la distensibilidad vascular alteran drásticamente la dinámica hemodinámica de la presión periférica $P_p(t)$. Un valor elevado de compliancia ($C = 3.500\,\mathrm{mL/mmHg}$ en el modelo hipotenso) incrementa la capacidad de almacenamiento elástico, generando respuestas más amortiguadas y con menor pendiente transitoria. En contraste, una menor compliancia ($C = 1.000\,\mathrm{mL/mmHg}$ en el modelo hipertenso) reduce la distensibilidad, provocando picos de presión más elevados, mayor rigidez arterial y un régimen transitorio más rápido.
+- **Análisis de polos, estabilidad y respuesta:** El cálculo de la ecuación característica demostró que los polos del sistema se ubican en el semiplano izquierdo del plano complejo ($\mathrm{Re}(\lambda_i) < 0$) para las tres condiciones fisiológicas, lo que confirma que el sistema es asintóticamente estable en lazo abierto. Asimismo, se comprobó analíticamente y de forma computacional que el error en estado estacionario ante una entrada escalón es nulo ($e_{ss} = 0\,\mathrm{V}$).
+- **Desempeño de los controladores PID:** La introducción de la retroalimentación negativa y la sintonización de un controlador PID permitieron compensar con éxito las desviaciones patológicas. El controlador redujo eficazmente el error transitorio y de seguimiento, logrando forzar la respuesta de los pacientes hipotensos e hipertensos para que convergieran de manera estable hacia la trayectoria de la señal de referencia normotensa.
+- **Consistencia multiplataforma:** Se constató una alta concordancia y reproducibilidad entre las diferentes herramientas computacionales empleadas. Los resultados obtenidos mediante los bloques de ecuaciones diferenciales y funciones de transferencia en MATLAB/Simulink, la implementación circuital en Simscape Electrical y la ejecución de scripts independientes en Python exhibieron trayectorias idénticas, validando la equivalencia matemática de las representaciones.
+- **Limitaciones del modelo:** Durante la simulación se observaron discrepancias menores asociadas a las simplificaciones propias del modelo Windkessel de 4 elementos frente a la complejidad real del sistema cardiovascular humano (el cual involucra no linealidades anatómicas, fenómenos de onda reflejada, variabilidad autonómica y autorregulación sistémica). Asimismo, se identificó que la elección del paso de integración numérico influye en la resolución de transitorios rápidos.
 
-Las conclusiones deben describir los resultados de esta práctica académica y no deben interpretarse como recomendaciones de diagnóstico o tratamiento.
+*Nota aclaratoria:* Las descripciones e interpretaciones presentadas en estas conclusiones corresponden estrictamente a los resultados de una práctica académica en el ámbito del modelado y control de sistemas fisiológicos, por lo que **no deben interpretarse ni utilizarse bajo ninguna circunstancia como recomendaciones clínicas, de diagnóstico o de tratamiento médico**.
 
 [Volver al contenido](#contenido)
 
