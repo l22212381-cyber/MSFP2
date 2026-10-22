@@ -203,6 +203,57 @@ $$k_P = \frac{R_r}{R_e}, \quad k_I = \frac{1}{R_e C_r}, \quad k_D = C_e R_r$$
 [Volver al contenido](#contenido)
 
 ---
+---
+
+<a id="senales"></a>
+## Señales de entrada y condiciones de simulación
+
+Las simulaciones numéricas se ejecutan en un intervalo de $0 \le t \le 15\,\mathrm{s}$ con un paso de integración de $\Delta t = 10^{-3}\,\mathrm{s}$.
+
+| Señal | Definición / Fuente | Propósito |
+|:---|:---|:---|
+| **Presión Aórtica $P_a(t)$** | Perfil pulsátil real desde `signal.xlsx` | Representar el ciclo cardiaco fisiológico periódico |
+| **Referencia $P_{p,\mathrm{normo}}(t)$** | Respuesta del modelo Normotenso | Establecer el patrón objetivo para la respuesta en lazo cerrado |
+
+[Volver al contenido](#contenido)
+
+---
+
+<a id="matlab"></a>
+## Implementación en MATLAB, Simulink y Simscape
+
+Se construyen tres representaciones equivalentes del sistema cardiovascular:
+
+1. **Diagrama de bloques de EDOs (Simulink):** Integradores y sumadores configurados según las variables de estado.
+2. **Función de transferencia (Simulink):** Bloque `Transfer Fcn` con el polinomio $G(s)$.
+3. **Circuito físico (Simscape Electrical):** Componentes $Z, L, R, C$ interconectados físicamente.
+
+El cuaderno de MATLAB (`Bonilla22212381.mlx`) ejecuta automáticamente las simulaciones, procesa las señales en el workspace y exporta las gráficas comparativas en formato PDF.
+
+[Volver al contenido](#contenido)
+
+---
+
+<a id="pid"></a>
+## Control en lazo cerrado y sintonización PID
+
+Para llevar la presión periférica $P_p(t)$ del paciente atípico (hipotenso o hipertenso) al valor de la señal de referencia normotensa, se conecta un controlador PID con retroalimentación negativa.
+
+### Ganancias sintonizadas del controlador
+
+| Condición Paciente | $k_P$ | $k_I$ | $k_D$ |
+|:---:|:---:|:---:|:---:|
+| **Hipotenso** | $462.9443$ | $1\,133\,845.8925$ | $0.006268$ |
+| **Hipertenso** | $135.2305$ | $338\,552.5438$ | $0.001749$ |
+
+### Implementación analógica (Red de OpAmps)
+Las relaciones algebraicas para seleccionar los componentes comerciales $R$ y $C$ del controlador son:
+
+$$k_P = \frac{R_r}{R_e}, \qquad k_I = \frac{1}{R_e C_r}, \qquad k_D = C_e R_r$$
+
+[Volver al contenido](#contenido)
+
+---
 
 <a id="python"></a>
 ## Implementación en Python
