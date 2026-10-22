@@ -259,47 +259,59 @@ Las simulaciones de lazo abierto demuestran el impacto de la compliancia $C$ en 
 
 ```mermaid
 flowchart TD
-    A[Modelo del Sistema Cardiovascular] --> B[Circuito Windkessel 4 Elementos]
-    B --> C[Ecuaciones Integro-diferenciales]
-    C --> D[Espacio de Estados y FT]
-    D --> E[Análisis de Polos y Estabilidad]
-    
-    E --> F[Simulink: EDOs y Simscape]
-    E --> G[MATLAB Live Script]
-    E --> H[Script de Python]
-    
-    G --> I[Sintonización PID Lazo Cerrado]
-    H --> I
-    
-    I --> J[Resultados Simulink vs Python]
-    J --> K[Exportación de PDFs y Publicación en GitHub]
+    A[Sistema Cardiovascular: Modelo Windkessel 4 elementos] --> B[Analogia Electrica Z, L, R, C]
+    B --> C[Leyes de Kirchhoff y Nodos]
+    C --> D[Ecuaciones Integro-Diferenciales]
+    C --> E[Modelo en Espacio de Estados - EDO 1er Orden]
+    C --> F[Funcion de Transferencia Gs]
+    F --> G[Analisis de Estabilidad de Polos y Error ess]
+    E --> H[Simulink: Ecuaciones de Estado]
+    F --> I[Simulink: Bloques Transfer Fcn]
+    B --> J[Simscape Electrical: Circuito RLC]
+    K[Senal Aleatoria Uniforme] --> H
+    K --> I
+    K --> J
+    H --> L[Respuesta en Lazo Abierto]
+    I --> L
+    J --> L
+    F --> M[Diseño de Controlador PID con Retroalimentacion]
+    M --> N[Sintonizacion con Tune de Simulink]
+    N --> O[Respuesta Lazo Cerrado MATLAB]
+    F --> P[Script de Python: Scipy.Signal]
+    N --> P
+    P --> Q[Respuesta Lazo Cerrado Python]
+    O --> R[Verificacion Cruzada Multimodelo]
+    Q --> R
+    R --> S[Generacion de Reporte README y Figuras PDF]
 ```
 
 [Volver al contenido](#contenido)
 
 ---
 
+
+
 <a id="estructura"></a>
 ## Estructura del repositorio
 
 ```text
 .
-├── README.md                              # Reporte principal en Markdown
-├── LICENSE                                 # Licencia del proyecto
-├── Bonilla22212381.mlx                    # Live Script de MATLAB con la práctica
-├── Bonilla22212381.pdf                    # Exportación del Live Script
-├── Bonilla22212381.py                     # Script de Python para simulación
-├── Sistemab.slx                           # Diagrama de bloques en Simulink/Simscape
-├── signal.xlsx                            # Datos de entrada de pulsación cardiovascular
-├── individuos_matlab.pdf                  # Gráfica comparativa lazo abierto (MATLAB)
-├── hipotenso_matlab.pdf                   # Gráfica paciente hipotenso controlado (MATLAB)
-├── hipertenso_matlab.pdf                  # Gráfica paciente hipertenso controlado (MATLAB)
-├── odes_matlab.pdf                        # Simulación por espacio de estados (MATLAB)
-├── Individuos_python.pdf                  # Gráfica comparativa lazo abierto (Python)
-├── Hipotenso_python.pdf                   # Gráfica paciente hipotenso controlado (Python)
-├── Hipertenso_python.pdf                  # Gráfica paciente hipertenso controlado (Python)
-├── Parametros del controlador Hipertenso.pdf # Evidencia de ganancias PID
-└── Parametros del controlador Hipotenso.pdf  # Evidencia de ganancias PID
+├── README.md                             
+├── LICENSE                                
+├── Bonilla22212381.mlx                    
+├── Bonilla22212381.pdf                   
+├── Bonilla22212381.py                   
+├── Sistemab.slx                          
+├── signal.xlsx                            
+├── individuos_matlab.pdf                 
+├── hipotenso_matlab.pdf                  
+├── hipertenso_matlab.pdf                
+├── odes_matlab.pdf                       
+├── Individuos_python.pdf                 
+├── Hipotenso_python.pdf                  
+├── Hipertenso_python.pdf                  
+├── Parametros del controlador Hipertenso.pdf 
+└── Parametros del controlador Hipotenso.pdf  
 ```
 
 [Volver al contenido](#contenido)
