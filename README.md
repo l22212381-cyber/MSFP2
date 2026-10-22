@@ -1,4 +1,4 @@
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=DrPaulValle/MSFBP0)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=l22212381-cyber/MSFP2)
 
 # Práctica 2 — Sistema Cardiovascular
 
@@ -12,9 +12,9 @@ El caso de estudio representa la **mecánica pulmonar** mediante un circuito **R
 **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de Tijuana  
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
-**Estudiante:** Nombre completo · Número de control · correo@tijuana.tecnm.mx
+**Estudiante:** Nayeli Bonilla Martinez · 22212381 · l22212381@tijuana.tecnm.mx
 
-**Repositorio de la asignatura:** https://github.com/DrPaulValle/MSF-IBF1020  
+**Repositorio de la asignatura:** https://github.com/l22212381-cyber/MSFP2
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
 
 ---
