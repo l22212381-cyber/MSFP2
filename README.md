@@ -31,8 +31,9 @@ Esta práctica aborda el modelado dinámico del sistema cardiovascular mediante 
 7. [Implementación en Python](#python)
 8. [Resultados y verificación cruzada](#resultados)
 9. [Flujo de trabajo](#flujo)
-10. [Estructura del repositorio](#estructura)
-11. [Referencias](#referencias)
+10. [Actividades del estudiante](#actividades)
+11. [Estructura del repositorio](#estructura)
+12. [Referencias](#referencias)
 
 ---
 
@@ -289,7 +290,26 @@ flowchart TD
 
 ---
 
+---
 
+<a id="actividades"></a>
+## Actividades del estudiante
+
+- [x] Identificar variables ($P_a, P_p, F_a, F_L$) y parámetros ($Z, L, R, C$).
+- [x] Derivar ecuaciones integro-diferenciales y la representación matricial de estado.
+- [x] Obtener la función de transferencia $G(s)$ y calcular polos y $e_{ss}$ analíticamente.
+- [x] Construir los modelos en Simulink (Ecuaciones de estado, $G(s)$ y Simscape Electrical).
+- [x] Configurar la señal aleatoria uniforme (`seed=106`, $T_s=0.1\,\mathrm{s}$, $t \in [0, 15]\,\mathrm{s}$).
+- [x] Ejecutar la simulación en lazo abierto para los tres casos.
+- [x] Diseñar los lazos de control PID y sintonizar $k_P, k_I, k_D$ mediante `Tune`.
+- [x] Desarrollar el cuaderno `.mlx` en MATLAB y exportar las respuestas a PDF.
+- [x] Implementar y ejecutar el código en Python (`.py`) para validación cruzada.
+- [x] Elaborar el diagrama biológico representativo.
+- [x] Organizar el repositorio GitHub con el archivo `CITATION.cff` y este `README.md`.
+
+[Volver al contenido](#contenido)
+
+---
 
 <a id="estructura"></a>
 ## Estructura del repositorio
