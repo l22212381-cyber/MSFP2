@@ -38,7 +38,8 @@ Esta práctica aborda el modelado dinámico del sistema cardiovascular mediante 
 14. [Estructura del repositorio](#estructura)
 15. [Requisitos](#requisitos)
 16. [Reproducibilidad y entregables](#reproducibilidad)
-17. [Referencias](#referencias)
+17. [Conclusiones](#conclusiones)
+18. [Referencias](#referencias)
 
 ---
 
@@ -405,18 +406,48 @@ flowchart TD
 ---
 
 <a id="reproducibilidad"></a>
-## Reproducibilidad y entregables
+## Requisitos y reproducción
 
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/TuUsuario/MSF-Practica2.git
-   ```
-2. Ejecutar el script `Bonilla22212381.mlx` en MATLAB para cargar variables, simular el archivo `Sistemab.slx` y exportar gráficas en PDF.
-3. Ejecutar el código Python:
-   ```bash
-   python Bonilla22212381.py
-   ```
-4. Verificar que las figuras generadas coincidan entre entornos computacionales.
+### Software
+
+- MATLAB.
+- Simulink.
+- Simscape Electrical.
+- Python y Visual Studio Code.
+- Las bibliotecas importadas por el archivo `Bonilla22212381.py`.
+- Git y GitHub.
+
+### Secuencia recomendada
+
+1. Revisar el desarrollo matemático y la tabla de parámetros.
+2. Verificar las ecuaciones de estado y las funciones de transferencia.
+3. Ejecutar los modelos en Simulink y Simscape Electrical para los tres conjuntos de parámetros.
+4. Confirmar que se utiliza la misma señal aleatoria en los tres casos.
+5. Comparar las respuestas en lazo abierto.
+6. Construir los dos sistemas de control tomando el modelo normotenso como referencia.
+7. Sintonizar los controladores PID con Tune y registrar sus ganancias.
+8. Ejecutar el cuaderno MATLAB y exportar las gráficas.
+9. Ejecutar el programa Python con la misma entrada y las mismas ganancias.
+10. Comparar los resultados entre las distintas representaciones y plataformas.
+11. Incorporar las figuras, capturas, el diagrama biológico y las conclusiones.
+12. Revisar que todos los archivos mencionados en el README estén incluidos en el repositorio.
+
+[Volver al contenido](#contenido)
+
+---
+
+<a id="conclusiones"></a>
+## Conclusiones
+
+Completar esta sección después de analizar los resultados obtenidos. Las conclusiones deben abordar:
+
+- Cómo influye la distensibilidad arterial \(C\) en las diferencias entre los modelos hipotenso, normotenso e hipertenso.
+- Qué se observó en el análisis de los polos, la estabilidad y la respuesta al escalón.
+- En qué medida los controladores PID redujeron el error respecto a la referencia normotensa.
+- Qué tan consistentes fueron los resultados de MATLAB/Simulink, Simscape Electrical y Python.
+- Qué diferencias o limitaciones se observaron durante la simulación.
+
+Las conclusiones deben describir los resultados de esta práctica académica y no deben interpretarse como recomendaciones de diagnóstico o tratamiento.
 
 [Volver al contenido](#contenido)
 
