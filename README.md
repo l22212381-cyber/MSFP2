@@ -25,7 +25,7 @@ Esta práctica aborda el modelado dinámico del sistema cardiovascular mediante 
 1. [Resumen](#resumen)
 2. [Competencia y objetivos](#objetivos)
 3. [Relación con el temario](#temario)
-4. [Modelo físico y analogía eléctrica](#analogia)
+4. [Modelo físico y analogía eléctrica (Windkessel)](#analogia)
 5. [Formulación matemática y espacio de estados](#modelo)
 6. [Análisis temporal, estabilidad y polos](#analisis)
 7. [Señales de entrada y condiciones de simulación](#senales)
