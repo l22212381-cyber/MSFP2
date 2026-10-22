@@ -63,7 +63,7 @@ Esta es una **práctica de reproducción y verificación**: se espera que el est
 
 ### Competencia a desarrollar
 
-Comprender los conceptos básicos de Ingeniería de Control, la respuesta temporal y los criterios de estabilidad mediante la reproducción y verificación de un modelo matemático de segundo orden aplicado a la mecánica pulmonar. La práctica permite familiarizarse con las herramientas computacionales, los instrumentos de laboratorio y los mecanismos de documentación empleados en actividades posteriores.
+Modeliza sistemas fisiológicos mediante circuitos eléctricos equivalentes, ecuaciones diferenciales y funciones de transferencia para analizar su comportamiento dinámico y diseña estrategias de control mediante técnicas de control clásico. En particular, durante la práctica el estudiante analizará el modelo Windkessel de cuatro elementos, comparará la dinámica cardiovascular de un individuo normotenso (control) con dos casos simulados, hipotenso e hipertenso, y diseñará estrategias de control in silico orientadas a reducir las diferencias entre las respuestas de los casos y la respuesta de referencia.
 
 ### Objetivo general
 
@@ -110,12 +110,12 @@ El sistema respiratorio se aproxima mediante un circuito RLC: la resistencia rep
 
 | Símbolo | Equivalente eléctrico | Interpretación fisiológica |
 |---|---|---|
-| $P_{ao}(t)$ | Voltaje de entrada | Presión aplicada en la apertura de las vías respiratorias |
-| $P_A(t)$ | Voltaje de salida | Presión alveolar |
+| $P_{a}(t)$ | Voltaje de entrada | Presión aplicada en la apertura de las vías respiratorias |
+| $P_{s}(t)$ | Voltaje de salida | Presión alveolar |
 | $Q(t)$ | Corriente | Flujo de aire |
 | $R$ | Resistencia | Resistencia equivalente al flujo de aire |
 | $L$ | Inductancia | Inertancia del flujo de aire |
-| $C$ | Capacitancia | Compliancia pulmonar equivalente |
+| $C$ | Capacitancia | Distentibilidad arterial |
 
 ### Parámetros para la emulación eléctrica
 
