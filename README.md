@@ -395,7 +395,7 @@ flowchart TD
 ## Requisitos
 
 ### Software
-- **MATLAB** R2021a o superior con Simulink, Simscape Electrical y Control System Toolbox.
+- **MATLAB** R2023a con Simulink, Simscape Electrical y Control System Toolbox.
 - **Python** 3.8+ con librerías `numpy`, `scipy`, `matplotlib`.
 - **Visual Studio Code** configurado para ejecución de scripts Python.
 - **BioRender** o equivalente para esquemas biológicos.
