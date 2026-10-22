@@ -178,28 +178,10 @@ $$\dot{P}_p(t) = \frac{1}{C} F_L(t) - \left( \frac{1}{ZC} + \frac{1}{RC} \right)
 
 En representación matricial $\dot{x}(t) = Ax(t) + Bu(t)$, $y(t) = C_mx(t) + D_mu(t)$:
 
-$$
-\begin{bmatrix} 
-\dot{F}_L(t) \\ \dot{P}_p(t) 
-\end{bmatrix} 
-= 
-\begin{bmatrix} 
-0 & -\frac{1}{L} \\ 
-\frac{1}{C} & -\left(\frac{1}{ZC} + \frac{1}{RC}\right) 
-\end{bmatrix} 
-\begin{bmatrix} 
-F_L(t) \\ P_p(t) 
-\end{bmatrix} 
-+ 
-\begin{bmatrix} 
-\frac{1}{L} \\ \frac{1}{ZC} 
-\end{bmatrix} 
-P_a(t)
-$$
+En representación matricial $\dot{x}(t) = A x(t) + B u(t)$, $y(t) = C_m x(t) + D_m u(t)$:
+$$\begin{bmatrix} \dot{F}_L(t) \\ \dot{P}_p(t) \end{bmatrix} = \begin{bmatrix} 0 & -\frac{1}{L} \\ \frac{1}{C} & -\left(\frac{1}{ZC} + \frac{1}{RC}\right) \end{bmatrix} \begin{bmatrix} F_L(t) \\ P_p(t) \end{bmatrix} + \begin{bmatrix} \frac{1}{L} \\ \frac{1}{ZC} \end{bmatrix} P_a(t)$$
 
-$$
-y(t) = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} F_L(t) \\ P_p(t) \end{bmatrix}
-$$
+$$y(t) = \begin{bmatrix} 0 & 1 \end{bmatrix} \begin{bmatrix} F_L(t) \\ P_p(t) \end{bmatrix}$$
 
 ### 4. Función de transferencia $G(s)$
 
