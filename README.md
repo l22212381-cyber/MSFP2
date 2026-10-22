@@ -28,13 +28,17 @@ Esta práctica aborda el modelado dinámico del sistema cardiovascular mediante 
 4. [Modelo físico y analogía eléctrica](#analogia)
 5. [Formulación matemática y espacio de estados](#modelo)
 6. [Análisis temporal, estabilidad y polos](#analisis)
-7. [Diseño del controlador PID](#controlador)
-8. [Implementación en Python](#python)
-9. [Resultados y verificación cruzada](#resultados)
-10. [Flujo de trabajo](#flujo)
-11. [Actividades del estudiante](#actividades)
-12. [Estructura del repositorio](#estructura)
-13. [Referencias](#referencias)
+7. [Señales de entrada y condiciones de simulación](#senales)
+8. [Implementación en MATLAB, Simulink y Simscape](#matlab)
+9. [Diseño del controlador PID](#controlador)
+10. [Implementación en Python](#python)
+11. [Resultados y verificación cruzada](#resultados)
+12. [Flujo de trabajo](#flujo)
+13. [Actividades del estudiante](#actividades)
+14. [Estructura del repositorio](#estructura)
+15. [Requisitos](#requisitos)
+16. [Reproducibilidad y entregables](#reproducibilidad)
+17. [Referencias](#referencias)
 
 ---
 
@@ -234,27 +238,6 @@ El cuaderno de MATLAB (`Bonilla22212381.mlx`) ejecuta automáticamente las simul
 
 ---
 
-<a id="pid"></a>
-## Control en lazo cerrado y sintonización PID
-
-Para llevar la presión periférica $P_p(t)$ del paciente atípico (hipotenso o hipertenso) al valor de la señal de referencia normotensa, se conecta un controlador PID con retroalimentación negativa.
-
-### Ganancias sintonizadas del controlador
-
-| Condición Paciente | $k_P$ | $k_I$ | $k_D$ |
-|:---:|:---:|:---:|:---:|
-| **Hipotenso** | $462.9443$ | $1\,133\,845.8925$ | $0.006268$ |
-| **Hipertenso** | $135.2305$ | $338\,552.5438$ | $0.001749$ |
-
-### Implementación analógica (Red de OpAmps)
-Las relaciones algebraicas para seleccionar los componentes comerciales $R$ y $C$ del controlador son:
-
-$$k_P = \frac{R_r}{R_e}, \qquad k_I = \frac{1}{R_e C_r}, \qquad k_D = C_e R_r$$
-
-[Volver al contenido](#contenido)
-
----
-
 <a id="python"></a>
 ## Implementación en Python
 
@@ -402,6 +385,38 @@ flowchart TD
 ├── Parametros del controlador Hipertenso.pdf 
 └── Parametros del controlador Hipotenso.pdf  
 ```
+
+[Volver al contenido](#contenido)
+
+---
+
+<a id="requisitos"></a>
+## Requisitos
+
+### Software
+- **MATLAB** R2021a o superior con Simulink, Simscape Electrical y Control System Toolbox.
+- **Python** 3.8+ con librerías `numpy`, `scipy`, `matplotlib`.
+- **Visual Studio Code** configurado para ejecución de scripts Python.
+- **BioRender** o equivalente para esquemas biológicos.
+- **Git** y **GitHub** para control de versiones.
+
+[Volver al contenido](#contenido)
+
+---
+
+<a id="reproducibilidad"></a>
+## Reproducibilidad y entregables
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/TuUsuario/MSF-Practica2.git
+   ```
+2. Ejecutar el script `Bonilla22212381.mlx` en MATLAB para cargar variables, simular el archivo `Sistemab.slx` y exportar gráficas en PDF.
+3. Ejecutar el código Python:
+   ```bash
+   python Bonilla22212381.py
+   ```
+4. Verificar que las figuras generadas coincidan entre entornos computacionales.
 
 [Volver al contenido](#contenido)
 
