@@ -1,4 +1,4 @@
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=NayeliBonilla/MSF-Practica2)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=l22212381-cyber/MSFP2)
 
 # Práctica 2 — Modelado y control del sistema cardiovascular mediante el modelo Windkessel
 
