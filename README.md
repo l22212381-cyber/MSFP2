@@ -96,7 +96,7 @@ La práctica integra contenidos correspondientes a las tres unidades principales
 
 
 <a id="analogia"></a>
-## Modelo físico y analogía eléctrica
+## Modelo físico y analogía eléctrica (Windkessel)
 
 El modelo Windkessel de 4 elementos representa la impedancia de la raíz aórtica, la inercia de la sangre, la distensibilidad de las arterias elásticas y la resistencia periférica total.
 
